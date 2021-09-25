@@ -9,7 +9,7 @@ function Navigation() {
     return (
         <NavigationStyled>
             <div className='avatar'>
-                <img className='img' src={avatar} />
+                <div className='img-holder'><img className='img' src={avatar} /></div>
             </div>
             <ul className='nav-items' alt='avatar'>
                 <li className='nav-item'>
@@ -56,13 +56,29 @@ const NavigationStyled = styled.nav`
         text-align:center;
         padding:2rem 0;
         
-        img{
-            
+        .img{
+            transition:transform .3s ease-in-out;
             border-radius:50%;
-            width:80%;
-            border:8px solid var(--border-color)
-
+            width:100%;
+           
         }
+        
+    }
+    .img-holder{
+        overflow:hidden;
+        width:200px;
+        height:200px;
+        margin:0 auto;
+        border-radius:50%;
+        border:8px solid var(--border-color);
+        transition:border .3s ease-in-out;
+    }
+    .img-holder:hover .img{
+        transform:scale(1.1);
+    }
+    .img-holder:hover{
+        border:8px solid var(--primary-color);
+        
     }
 
     .nav-items{

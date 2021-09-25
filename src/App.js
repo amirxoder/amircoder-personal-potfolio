@@ -9,6 +9,7 @@ const App = () => {
         <>
             <Sidebar />
             <MainContent />
+
         </>
     );
 }
