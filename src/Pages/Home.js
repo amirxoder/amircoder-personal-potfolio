@@ -29,7 +29,7 @@ function Home() {
 
 const HomeStyled = styled.header`
     width:100%;
-    overflow:hidden;
+    
     min-height: 100vh;
     /* position: relative; */
     .p-particle-js{
